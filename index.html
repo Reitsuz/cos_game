@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09070e">
+  <title>RYO ARCHIVE // lost files</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="logo" href="#top">RYO<span>_</span>ARCHIVE</a>
+    <span class="status"><i></i> ARCHIVE CONNECTION UNSTABLE</span>
+  </header>
+
+  <main id="top">
+    <section class="hero panel">
+      <p class="eyebrow">PERSONAL ARCHIVE / CASE 001</p>
+      <h1>見つけて。<br><span>忘れないで。</span></h1>
+      <p class="intro">閉じられたアーカイブに、6つの記録が残っている。<br>クイズを解いて記録を開放し、何かがいる気配に気をつけて。</p>
+      <div class="hero-actions">
+        <button id="startBtn" class="primary">調査を開始する <span>→</span></button>
+        <button id="soundBtn" class="ghost" aria-pressed="false">効果音：OFF</button>
+      </div>
+      <div class="hero-meta"><span>FILE COUNT: <b>06</b></span><span>ACCESS LEVEL: <b id="accessLevel">01</b></span><span>STATUS: <b id="statusText">WAITING</b></span></div>
+    </section>
+
+    <section class="section-head" id="quiz">
+      <div><p class="eyebrow">01 / KNOWLEDGE CHECK</p><h2>記憶照合クイズ</h2></div>
+      <p class="muted">正解するとアーカイブの鍵が開きます。</p>
+    </section>
+    <section class="quiz panel">
+      <div class="quiz-progress"><span id="quizCount">QUESTION 01 / 05</span><span id="quizScore">SCORE 0</span></div>
+      <div class="progress-track"><div id="progressFill"></div></div>
+      <h3 id="questionText">アーカイブを開始してください。</h3>
+      <div id="answers" class="answers"></div>
+      <p id="quizFeedback" class="feedback" aria-live="polite">STARTを押して調査を開始。</p>
+      <button id="nextQuestion" class="primary small" disabled>次の質問 →</button>
+    </section>
+
+    <section class="section-head" id="records">
+      <div><p class="eyebrow">02 / RECOVERED RECORDS</p><h2>回収した記録</h2></div>
+      <p class="muted">写真はXの元投稿で確認できます。</p>
+    </section>
+    <section id="cards" class="cards">
+      <article class="record panel locked" data-id="0">
+        <div class="record-number">FILE_001</div><div class="record-art"><span>?</span></div>
+        <h3>UNKNOWN RECORD</h3><p>まだアクセスできません。</p><a class="post-link disabled" href="#" aria-disabled="true">LOCKED — クイズを進める</a>
+      </article>
+      <article class="record panel locked" data-id="1">
+        <div class="record-number">FILE_002</div><div class="record-art"><span>?</span></div>
+        <h3>UNKNOWN RECORD</h3><p>まだアクセスできません。</p><a class="post-link disabled" href="#" aria-disabled="true">LOCKED — クイズを進める</a>
+      </article>
+      <article class="record panel locked" data-id="2">
+        <div class="record-number">FILE_003</div><div class="record-art"><span>?</span></div>
+        <h3>UNKNOWN RECORD</h3><p>まだアクセスできません。</p><a class="post-link disabled" href="#" aria-disabled="true">LOCKED — クイズを進める</a>
+      </article>
+      <article class="record panel locked" data-id="3">
+        <div class="record-number">FILE_004</div><div class="record-art"><span>?</span></div>
+        <h3>UNKNOWN RECORD</h3><p>まだアクセスできません。</p><a class="post-link disabled" href="#" aria-disabled="true">LOCKED — クイズを進める</a>
+      </article>
+      <article class="record panel locked" data-id="4">
+        <div class="record-number">FILE_005</div><div class="record-art"><span>?</span></div>
+        <h3>UNKNOWN RECORD</h3><p>まだアクセスできません。</p><a class="post-link disabled" href="#" aria-disabled="true">LOCKED — クイズを進める</a>
+      </article>
+      <article class="record panel locked" data-id="5">
+        <div class="record-number">FILE_006</div><div class="record-art"><span>?</span></div>
+        <h3>UNKNOWN RECORD</h3><p>まだアクセスできません。</p><a class="post-link disabled" href="#" aria-disabled="true">LOCKED — クイズを進める</a>
+      </article>
+    </section>
+
+    <section class="warning panel">
+      <span class="warning-icon">!</span>
+      <div><h3>警告：背後の気配</h3><p id="warningText">まだ何も検出されていません。</p></div>
+      <button id="checkBehind" class="ghost">背後を確認</button>
+    </section>
+  </main>
+  <footer><span>RYO_ARCHIVE // FAN PROJECT</span><span>PHOTOS OPEN ON X · NO IMAGE FILES HOSTED HERE</span></footer>
+
+  <div id="flash" class="flash" aria-hidden="true"></div>
+  <div id="horrorOverlay" class="horror-overlay" aria-hidden="true">
+    <div class="horror-noise"></div><div class="horror-face">◉</div>
+    <p id="horrorMessage">見ているよ。</p>
+    <button id="closeHorror" class="ghost">画面を戻す</button>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
